@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/codeyourstory/cys-engine.svg?branch=master)](https://travis-ci.org/codeyourstory/cys-engine)
+
 # The Project
 
 CodeYourStory is a project whose purpose is:
