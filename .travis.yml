@@ -6,5 +6,5 @@ install:
   - sudo apt-get update -qq
 script:
 # compile the engine
-  - cd build/linux && cmake . && make
+  - cd build/cmake && cmake . && make
 # todo: run the tests 
