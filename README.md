@@ -17,6 +17,8 @@ Purposes of cys-engine:
 
 The compilation will be made via cmake.
 
+Use "cd build/cmake && cmake . && make" to compile
+
 # Licence
 
 The project is under the MIT licence.
