@@ -1,0 +1,10 @@
+language: c
+compiler:
+  - gcc
+install:
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+  - sudo apt-get update -qq
+script:
+# compile the engine
+  - cd build/linux && cmake . && make
+# todo: run the tests 
