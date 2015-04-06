@@ -26,8 +26,10 @@ include_directories(
 
 add_executable(cys-server ${source_files})
 
-add_custom_command(TARGET cysengine POST_BUILD 
-  COMMAND ${CMAKE_COMMAND} -E copy libcysengine.a ../../bin/libcysengine.a
+target_link_libraries(cys-server -lpthread)
+
+add_custom_command(TARGET cys-server POST_BUILD 
+  COMMAND ${CMAKE_COMMAND} -E copy cys-server ../../bin/cys-server
 )
 
 # TESTS AND TEST RUNNER
@@ -43,9 +45,9 @@ MACRO( TEST _target _target_folder )
 
   file(MAKE_DIRECTORY ../../bin/tests/${_target}) 
 
-  add_custom_command(TARGET ${_target} POST_BUILD 
-    COMMAND ${CMAKE_COMMAND} -E copy ${_target} ../../bin/tests/${_target_folder}/test
-  )
+  #add_custom_command(TARGET ${_target} POST_BUILD 
+  #  COMMAND ${CMAKE_COMMAND} -E copy ${_target} ../../bin/tests/${_target_folder}/test
+  #
 
 ENDMACRO( TEST )
 
