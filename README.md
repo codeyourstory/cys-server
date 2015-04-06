@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/codeyourstory/cys-engine.svg?branch=master)](https://travis-ci.org/codeyourstory/cys-engine)
+[![Build Status](https://travis-ci.org/codeyourstory/cys-server.svg?branch=master)](https://travis-ci.org/codeyourstory/cys-server)
 
 # The Project
 
