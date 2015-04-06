@@ -3,8 +3,10 @@
 
 using namespace std;
 
-void test()
+int main()
 {
   cout << "Code Your Story Engine" << endl;
+  
+  return 0;
 }
 

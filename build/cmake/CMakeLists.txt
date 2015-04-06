@@ -21,9 +21,10 @@ file(
 
 include_directories(
   ../../include/
+  ../../externals/cys-engine/include/
 )
 
-add_library(cysengine ${source_files})
+add_executable(cys-server ${source_files})
 
 add_custom_command(TARGET cysengine POST_BUILD 
   COMMAND ${CMAKE_COMMAND} -E copy libcysengine.a ../../bin/libcysengine.a
@@ -48,17 +49,17 @@ MACRO( TEST _target _target_folder )
 
 ENDMACRO( TEST )
 
-TEST( 01Tmp 01Tmp )
+#TEST( 01Tmp 01Tmp )
 
 # test runner
 
-file(
-    GLOB_RECURSE _sources_runner
-    ../../tests/runner/*.cpp
-  )
-add_executable( test_runner ${_sources_runner})
+#file(
+#    GLOB_RECURSE _sources_runner
+#    ../../tests/runner/*.cpp
+#  )
+#add_executable( test_runner ${_sources_runner})
 
-add_custom_command(TARGET test_runner POST_BUILD 
-  COMMAND ${CMAKE_COMMAND} -E copy test_runner ../../bin/test-runner
-)
+#add_custom_command(TARGET test_runner POST_BUILD 
+#  COMMAND ${CMAKE_COMMAND} -E copy test_runner ../../bin/test-runner
+#)
 
